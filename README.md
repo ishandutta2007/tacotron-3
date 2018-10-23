@@ -36,10 +36,6 @@ Pull requests are welcome!
    pip install -r requirements_mac_py342.txt
    ```
 
-NOTE: This forked repo is throwing abstract class error
-I haven't invensted much time in debugging it, if someone can debug you are welcome.
-https://stackoverflow.com/questions/31457855/cant-instantiate-abstract-class-with-abstract-methods
-
 ### Using a pre-trained model
 
 1. **Download and unpack a model**:
@@ -51,6 +47,10 @@ https://stackoverflow.com/questions/31457855/cant-instantiate-abstract-class-wit
    ```
    python3 demo_server.py --checkpoint /tmp/tacotron-20170720/model.ckpt
    ```
+
+NOTE: This forked repo is throwing abstract class error.
+I haven't invensted much time in debugging it, if someone can debug you are welcome.
+https://stackoverflow.com/questions/31457855/cant-instantiate-abstract-class-with-abstract-methods
 
 3. **Point your browser at localhost:9000**
    * Type what you want to synthesize
