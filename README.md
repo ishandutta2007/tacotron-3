@@ -2,7 +2,6 @@
 
 An implementation of Tacotron speech synthesis in TensorFlow.
 
-
 ### Audio Samples
 
   * **[Audio Samples](https://keithito.github.io/audio-samples/)** from models trained using this repo.
@@ -10,8 +9,6 @@ An implementation of Tacotron speech synthesis in TensorFlow.
       * Speech started to become intelligble around 20K steps.
       * Although loss continued to decrease, there wasn't much noticable improvement after ~250K steps.
     * The second set was trained by [@MXGray](https://github.com/MXGray) for 140K steps on the [Nancy Corpus](http://www.cstr.ed.ac.uk/projects/blizzard/2011/lessac_blizzard2011/).
-
-
 
 ## Background
 
@@ -23,8 +20,6 @@ attempt to provide an open-source implementation of the model described in their
 The quality isn't as good as Google's demo yet, but hopefully it will get there someday :-).
 Pull requests are welcome!
 
-
-
 ## Quick Start
 
 ### Installing dependencies
@@ -34,11 +29,16 @@ Pull requests are welcome!
 2. Install [TensorFlow 1.3](https://www.tensorflow.org/install/). Install with GPU support if it's
    available for your platform.
 
-3. Install requirements:
+3. Install requirements(Assuming you are using python 3.42):
    ```
-   pip install -r requirements.txt
+   virtualenv env342
+   source env342/bin/activate
+   pip install -r requirements_mac_py342.txt
    ```
 
+NOTE: This forked repo is throwing abstract class error
+I haven't invensted much time in debugging it, if someone can debug you are welcome.
+https://stackoverflow.com/questions/31457855/cant-instantiate-abstract-class-with-abstract-methods
 
 ### Using a pre-trained model
 
@@ -55,8 +55,6 @@ Pull requests are welcome!
 3. **Point your browser at localhost:9000**
    * Type what you want to synthesize
 
-
-
 ### Training
 
 *Note: you need at least 40GB of free disk space to train a model.*
@@ -68,7 +66,6 @@ Pull requests are welcome!
     * [Blizzard 2012](http://www.cstr.ed.ac.uk/projects/blizzard/2012/phase_one) (Creative Commons Attribution Share-Alike)
 
    You can use other datasets if you convert them to the right format. See [TRAINING_DATA.md](TRAINING_DATA.md) for more info.
-
 
 2. **Unpack the dataset into `~/tacotron`**
 

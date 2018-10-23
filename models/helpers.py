@@ -5,11 +5,29 @@ from tensorflow.contrib.seq2seq import Helper
 
 # Adapted from tf.contrib.seq2seq.GreedyEmbeddingHelper
 class TacoTestHelper(Helper):
-  def __init__(self, batch_size, output_dim, r):
+  # def __init__(self, batch_size, output_dim, r):
+  #   with tf.name_scope('TacoTestHelper'):
+  #     self._batch_size = batch_size
+  #     self._output_dim = output_dim
+  #     self._end_token = tf.tile([0.0], [output_dim * r])
+
+  def __init__(initialize_fn, sample_fn, next_inputs_fn, sample_ids_shape=None, sample_ids_dtype=None):
     with tf.name_scope('TacoTestHelper'):
-      self._batch_size = batch_size
-      self._output_dim = output_dim
-      self._end_token = tf.tile([0.0], [output_dim * r])
+      print("=====initialize_fn:==")
+      print(initialize_fn)
+      print("=====sample_fn:==")
+      print(sample_fn)
+      self._batch_size = sample_fn
+      print("=====next_inputs_fn:==")
+      print(next_inputs_fn)
+      self._output_dim = next_inputs_fn
+      print("=====sample_ids_shape:==")
+      print(sample_ids_shape)
+      self._end_token = tf.tile([0.0], [output_dim * sample_ids_shape])
+      print("=====sample_ids_dtype:==")
+      print(sample_ids_dtype)
+      print("=======")
+    # pass
 
   @property
   def batch_size(self):

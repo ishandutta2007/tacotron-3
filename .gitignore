@@ -3,3 +3,10 @@ __pycache__/
 *.pyc
 .DS_Store
 run*.sh
+env270/
+env342/
+env360/
+pretrained
+.python-version
+.vscode/
+
