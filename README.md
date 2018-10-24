@@ -28,6 +28,10 @@ Pull requests are welcome!
 
 2. Install [TensorFlow 1.3](https://www.tensorflow.org/install/). Install with GPU support if it's
    available for your platform.
+   
+   ```
+   pip install https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.11.0-cp27-none-linux_x86_64.whl
+   ```
 
 3. Install requirements(Assuming you are using python 3.42):
    ```
